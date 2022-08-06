@@ -1,0 +1,33 @@
+.fifth-card-container {
+  background-image: url(../../../assets/image/Rectangle\ 27.png),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 50.26%, #000000 100%);
+  height: var(--image-card-height);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+.fifth-card-body {
+  height: var(--fifth-card-body-hg);
+}
+.img1 {
+  background: url(../../../assets/image/Rectangle\ 28.png),
+    linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #000000 100%);
+}
+.img2 {
+  background: url(../../../assets/image/Rectangle\ 29.png),
+    linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #000000 100%);
+}
+.img3 {
+  background: url(../../../assets/image/Rectangle\ 30\ .png),
+    linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #000000 100%);
+}
+.img4 {
+  background: var(--ad-background-color);
+}
+.fifth-card-sm-card {
+  height: var(--image-card-sm-height);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

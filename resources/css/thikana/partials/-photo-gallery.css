@@ -1,0 +1,58 @@
+.photo-gallery-heading {
+  font-size: var(-title2-fontSize);
+  font-weight: var(--title1-weight);
+  line-height: var(--title1-lh);
+  color: var(--font-color);
+}
+.js-carousel {
+  /* max-width: 1200px; */
+  margin: auto;
+  /* padding: 0 30px; */
+}
+.js-carousel .card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover !important;
+  height: 240px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.js-carousel .card-1 {
+  background: url(../../../assets/image/Rectangle\ 50.png);
+}
+.js-carousel .card-2 {
+  background: url(../../../assets/image/Rectangle\ 51.png);
+}
+.js-carousel .card-3 {
+  background: url(../../../assets/image/Rectangle\ 52.png);
+}
+.js-carousel .card-4 {
+  background: url(../../../assets/image/Rectangle\ 53.png);
+}
+.js-carousel .card-5 {
+  background: url(../../../assets/image/Rectangle\ 29.png);
+}
+.js-carousel .card-6 {
+  background: url(../../../assets/image/Rectangle\ 60.png);
+}
+.js-carousel .card-7 {
+  background: url(../../../assets/image/Rectangle\ 32.png);
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 1.1vw;
+}
+.owl-dot {
+  height: 15px;
+  width: 3.4vw;
+  margin: 0.3vw;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid var(--font-color) !important;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: var(--font-color) !important;
+}

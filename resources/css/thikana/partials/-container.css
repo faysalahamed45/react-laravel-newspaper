@@ -1,0 +1,17 @@
+div,p{
+  margin: 0;
+  padding: 0;
+}
+body,html {
+	font-family: var(--font-1);
+  scroll-behavior: smooth;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+hr {
+        height: 1px !important;
+        position: relative!important;
+        border: none!important;
+     color: rgba(0,0,0,0.5) !important;
+}
+

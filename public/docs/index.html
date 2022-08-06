@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Thikana Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/obsidian.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js"></script>
+
+    <style id="language-style">
+        /* starts out as display none and is replaced with js later  */
+                    body .content .bash-example code { display: none; }
+                    body .content .javascript-example code { display: none; }
+            </style>
+
+    <script>
+        var baseUrl = "http://localhost/oshni/thikana/public";
+        var useCsrf = Boolean();
+        var csrfUrl = "/sanctum/csrf-cookie";
+    </script>
+    <script src="../docs/js/tryitout-3.30.0.js"></script>
+
+    <script src="../docs/js/theme-default-3.30.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+
+<a href="#" id="nav-button">
+    <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image" />
+    </span>
+</a>
+<div class="tocify-wrapper">
+    
+            <div class="lang-selector">
+                                            <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                            <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                    </div>
+    
+    <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+
+    <div id="toc">
+                                                                            <ul id="tocify-header-0" class="tocify-header">
+                    <li class="tocify-item level-1" data-unique="introduction">
+                        <a href="#introduction">Introduction</a>
+                    </li>
+                                            
+                                                                    </ul>
+                                                <ul id="tocify-header-1" class="tocify-header">
+                    <li class="tocify-item level-1" data-unique="authenticating-requests">
+                        <a href="#authenticating-requests">Authenticating requests</a>
+                    </li>
+                                            
+                                                </ul>
+                    
+                    <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-menu">
+                        <a href="#endpoints-GETapi-menu">GET api/menu</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-menu-post--slug-">
+                        <a href="#endpoints-GETapi-menu-post--slug-">GET api/menu-post/{slug}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-post--slug-">
+                        <a href="#endpoints-GETapi-post--slug-">GET api/post/{slug}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-home-post">
+                        <a href="#endpoints-GETapi-home-post">GET api/home-post</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-classified-category">
+                        <a href="#endpoints-GETapi-classified-category">GET api/classified/category</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-classified-category-post--slug-">
+                        <a href="#endpoints-GETapi-classified-category-post--slug-">GET api/classified/category-post/{slug}</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-classified-home-post">
+                        <a href="#endpoints-GETapi-classified-home-post">GET api/classified/home-post</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-classified-filter-post">
+                        <a href="#endpoints-GETapi-classified-filter-post">GET api/classified/filter-post</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+        
+                        
+            </div>
+
+            <ul class="toc-footer" id="toc-footer">
+                            <li><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                            <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+                    </ul>
+        <ul class="toc-footer" id="last-updated">
+        <li>Last updated: June 28 2022</li>
+    </ul>
+</div>
+
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1 id="introduction">Introduction</h1>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://localhost</code></pre>
+
+        <h1 id="authenticating-requests">Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+            <h2 id="endpoints-GETapi-menu">GET api/menu</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-menu">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/oshni/thikana/public/api/menu" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "x-language: [en, bn]"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/oshni/thikana/public/api/menu"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "x-language": "[en, bn]",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-menu">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Menu Provided.&quot;,
+    &quot;data&quot;: {
+        &quot;header&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;page_type&quot;: &quot;Page&quot;,
+                &quot;type&quot;: null,
+                &quot;slug&quot;: &quot;rhona-beach&quot;,
+                &quot;name&quot;: &quot;Rhona Beach&quot;
+            }
+        ],
+        &quot;footer&quot;: [
+            {
+                &quot;id&quot;: 3,
+                &quot;page_type&quot;: &quot;Category&quot;,
+                &quot;type&quot;: &quot;news&quot;,
+                &quot;slug&quot;: &quot;c&quot;,
+                &quot;name&quot;: &quot;C&quot;
+            }
+        ]
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-menu" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-menu"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-menu"></code></pre>
+</span>
+<span id="execution-error-GETapi-menu" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-menu"></code></pre>
+</span>
+<form id="form-GETapi-menu" data-method="GET"
+      data-path="api/menu"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","x-language":"[en, bn]"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-menu', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-menu"
+                    onclick="tryItOut('GETapi-menu');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-menu"
+                    onclick="cancelTryOut('GETapi-menu');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-menu" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/menu</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-menu-post--slug-">GET api/menu-post/{slug}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-menu-post--slug-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/oshni/thikana/public/api/menu-post/ratione" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "x-language: [en, bn]"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/oshni/thikana/public/api/menu-post/ratione"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "x-language": "[en, bn]",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-menu-post--slug-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Data Provided.&quot;,
+    &quot;type&quot;: &quot;Page&quot;,
+    &quot;data&quot;: {
+        &quot;page&quot;: {
+            &quot;name&quot;: &quot;Rhona Beach&quot;,
+            &quot;content&quot;: &quot;Cupiditate velit, iu.rterter&quot;
+        },
+        &quot;category&quot;: {
+            &quot;id&quot;: 5,
+            &quot;parent_id&quot;: 1,
+            &quot;slug&quot;: &quot;c&quot;,
+            &quot;name&quot;: &quot;C&quot;,
+            &quot;parent&quot;: {
+                &quot;id&quot;: 1,
+                &quot;slug&quot;: &quot;politics&quot;,
+                &quot;name&quot;: &quot;Politics&quot;
+            },
+            &quot;childs&quot;: [
+                {
+                    &quot;parent_id&quot;: 1,
+                    &quot;slug&quot;: &quot;a&quot;,
+                    &quot;name&quot;: &quot;A&quot;
+                }
+            ]
+        },
+        &quot;posts&quot;: {
+            &quot;data&quot;: [
+                {
+                    &quot;id&quot;: 1,
+                    &quot;category_id&quot;: 1,
+                    &quot;editor_id&quot;: 2,
+                    &quot;slug&quot;: &quot;libero-nostrum-ut-si&quot;,
+                    &quot;title&quot;: &quot;Libero nostrum ut si&quot;,
+                    &quot;content&quot;: &quot;Labore inventore exc.1&quot;,
+                    &quot;image_url&quot;: &quot;http://localhost/oshni/thikana/public/storage/posts/1/1.jpg&quot;,
+                    &quot;video_url&quot;: &quot;https://www.youtube.com/watch?v=euutjIUIXTY&quot;,
+                    &quot;published_at&quot;: &quot;2022-06-01 03:45:00&quot;,
+                    &quot;editor&quot;: {
+                        &quot;id&quot;: 2,
+                        &quot;name&quot;: &quot;Fiona Paul&quot;
+                    },
+                    &quot;category&quot;: {
+                        &quot;id&quot;: 1,
+                        &quot;slug&quot;: &quot;politics&quot;,
+                        &quot;name&quot;: &quot;Politics&quot;
+                    }
+                }
+            ]
+        }
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-menu-post--slug-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-menu-post--slug-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-menu-post--slug-"></code></pre>
+</span>
+<span id="execution-error-GETapi-menu-post--slug-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-menu-post--slug-"></code></pre>
+</span>
+<form id="form-GETapi-menu-post--slug-" data-method="GET"
+      data-path="api/menu-post/{slug}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","x-language":"[en, bn]"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-menu-post--slug-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-menu-post--slug-"
+                    onclick="tryItOut('GETapi-menu-post--slug-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-menu-post--slug-"
+                    onclick="cancelTryOut('GETapi-menu-post--slug-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-menu-post--slug-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/menu-post/{slug}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>slug</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="slug"
+               data-endpoint="GETapi-menu-post--slug-"
+               value="ratione"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-post--slug-">GET api/post/{slug}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-post--slug-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/oshni/thikana/public/api/post/14" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "x-language: [en, bn]"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/oshni/thikana/public/api/post/14"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "x-language": "[en, bn]",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-post--slug-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Post Provided.&quot;,
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;category_id&quot;: 1,
+        &quot;editor_id&quot;: 2,
+        &quot;slug&quot;: &quot;libero-nostrum-ut-si&quot;,
+        &quot;title&quot;: &quot;Libero nostrum ut si&quot;,
+        &quot;content&quot;: &quot;Labore inventore exc.1&quot;,
+        &quot;image_url&quot;: &quot;http://localhost/oshni/thikana/public/storage/posts/1/1.jpg&quot;,
+        &quot;video_url&quot;: &quot;https://www.youtube.com/watch?v=euutjIUIXTY&quot;,
+        &quot;published_at&quot;: &quot;2022-06-01 03:45:00&quot;,
+        &quot;editor&quot;: {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;Fiona Paul&quot;
+        },
+        &quot;category&quot;: {
+            &quot;id&quot;: 1,
+            &quot;slug&quot;: &quot;politics&quot;,
+            &quot;name&quot;: &quot;Politics&quot;
+        },
+        &quot;medias&quot;: [
+            {
+                &quot;post_id&quot;: 1,
+                &quot;type&quot;: &quot;image&quot;,
+                &quot;file_url&quot;: &quot;http://localhost/oshni/thikana/public/storage/posts/1/2.jpg&quot;
+            },
+            {
+                &quot;post_id&quot;: 1,
+                &quot;type&quot;: &quot;image&quot;,
+                &quot;file_url&quot;: &quot;http://localhost/oshni/thikana/public/storage/posts/1/3.jpg&quot;
+            }
+        ]
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-post--slug-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-post--slug-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-post--slug-"></code></pre>
+</span>
+<span id="execution-error-GETapi-post--slug-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-post--slug-"></code></pre>
+</span>
+<form id="form-GETapi-post--slug-" data-method="GET"
+      data-path="api/post/{slug}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","x-language":"[en, bn]"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-post--slug-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-post--slug-"
+                    onclick="tryItOut('GETapi-post--slug-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-post--slug-"
+                    onclick="cancelTryOut('GETapi-post--slug-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-post--slug-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/post/{slug}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>slug</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="slug"
+               data-endpoint="GETapi-post--slug-"
+               value="14"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-home-post">GET api/home-post</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-home-post">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/oshni/thikana/public/api/home-post" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "x-language: [en, bn]"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/oshni/thikana/public/api/home-post"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "x-language": "[en, bn]",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-home-post">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Home Page Data Provided.&quot;,
+    &quot;data&quot;: {
+        &quot;feature_post&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;category_id&quot;: 1,
+                &quot;editor_id&quot;: 2,
+                &quot;slug&quot;: &quot;libero-nostrum-ut-si&quot;,
+                &quot;title&quot;: &quot;Libero nostrum ut si&quot;,
+                &quot;content&quot;: &quot;Labore inventore exc.1&quot;,
+                &quot;image_url&quot;: &quot;http://localhost/oshni/thikana/public/storage/posts/1/1.jpg&quot;,
+                &quot;video_url&quot;: &quot;https://www.youtube.com/watch?v=euutjIUIXTY&quot;,
+                &quot;published_at&quot;: &quot;2022-06-01 03:45:00&quot;,
+                &quot;editor&quot;: {
+                    &quot;id&quot;: 2,
+                    &quot;name&quot;: &quot;Fiona Paul&quot;
+                },
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;রাজনীতি&quot;
+                },
+                &quot;medias&quot;: [
+                    {
+                        &quot;post_id&quot;: 1,
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;file_url&quot;: &quot;http://localhost/oshni/thikana/public/storage/posts/1/2.jpg&quot;
+                    },
+                    {
+                        &quot;post_id&quot;: 1,
+                        &quot;type&quot;: &quot;image&quot;,
+                        &quot;file_url&quot;: &quot;http://localhost/oshni/thikana/public/storage/posts/1/3.jpg&quot;
+                    }
+                ]
+            }
+        ],
+        &quot;feature_post_2&quot;: [],
+        &quot;exclusive&quot;: [],
+        &quot;latest_post&quot;: [],
+        &quot;top_read&quot;: [],
+        &quot;category_section_1&quot;: []
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-home-post" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-home-post"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-home-post"></code></pre>
+</span>
+<span id="execution-error-GETapi-home-post" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-home-post"></code></pre>
+</span>
+<form id="form-GETapi-home-post" data-method="GET"
+      data-path="api/home-post"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","x-language":"[en, bn]"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-home-post', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-home-post"
+                    onclick="tryItOut('GETapi-home-post');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-home-post"
+                    onclick="cancelTryOut('GETapi-home-post');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-home-post" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/home-post</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-classified-category">GET api/classified/category</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-classified-category">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/oshni/thikana/public/api/classified/category" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "x-language: [en, bn]"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/oshni/thikana/public/api/classified/category"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "x-language": "[en, bn]",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-classified-category">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Classified Category Provided.&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;slug&quot;: &quot;rhona-beach&quot;,
+            &quot;name&quot;: &quot;Amal Harris&quot;,
+            &quot;posts_count&quot;: 106
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-classified-category" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-classified-category"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-classified-category"></code></pre>
+</span>
+<span id="execution-error-GETapi-classified-category" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-classified-category"></code></pre>
+</span>
+<form id="form-GETapi-classified-category" data-method="GET"
+      data-path="api/classified/category"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","x-language":"[en, bn]"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-classified-category', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-classified-category"
+                    onclick="tryItOut('GETapi-classified-category');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-classified-category"
+                    onclick="cancelTryOut('GETapi-classified-category');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-classified-category" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/classified/category</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-classified-category-post--slug-">GET api/classified/category-post/{slug}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-classified-category-post--slug-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/oshni/thikana/public/api/classified/category-post/eveniet" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "x-language: [en, bn]"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/oshni/thikana/public/api/classified/category-post/eveniet"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "x-language": "[en, bn]",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-classified-category-post--slug-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Category posts Provided.&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;category_id&quot;: 1,
+            &quot;is_premium&quot;: &quot;Yes&quot;,
+            &quot;content&quot;: &quot;&lt;p&gt;vcb cb&lt;/p&gt;&quot;,
+            &quot;category&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Constance Ryan&quot;,
+                &quot;slug&quot;: &quot;constance-ryan&quot;
+            }
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-classified-category-post--slug-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-classified-category-post--slug-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-classified-category-post--slug-"></code></pre>
+</span>
+<span id="execution-error-GETapi-classified-category-post--slug-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-classified-category-post--slug-"></code></pre>
+</span>
+<form id="form-GETapi-classified-category-post--slug-" data-method="GET"
+      data-path="api/classified/category-post/{slug}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","x-language":"[en, bn]"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-classified-category-post--slug-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-classified-category-post--slug-"
+                    onclick="tryItOut('GETapi-classified-category-post--slug-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-classified-category-post--slug-"
+                    onclick="cancelTryOut('GETapi-classified-category-post--slug-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-classified-category-post--slug-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/classified/category-post/{slug}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>slug</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="slug"
+               data-endpoint="GETapi-classified-category-post--slug-"
+               value="eveniet"
+               data-component="url" hidden>
+    <br>
+
+            </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-classified-home-post">GET api/classified/home-post</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-classified-home-post">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/oshni/thikana/public/api/classified/home-post" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "x-language: [en, bn]"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/oshni/thikana/public/api/classified/home-post"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "x-language": "[en, bn]",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-classified-home-post">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Home Page Data Provided.&quot;,
+    &quot;data&quot;: {
+        &quot;premium_post&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;category_id&quot;: 1,
+                &quot;is_premium&quot;: &quot;Yes&quot;,
+                &quot;content&quot;: &quot;&lt;p&gt;vcb cb&lt;/p&gt;&quot;,
+                &quot;category&quot;: {
+                    &quot;id&quot;: 1,
+                    &quot;name&quot;: &quot;Constance Ryan&quot;,
+                    &quot;slug&quot;: &quot;constance-ryan&quot;
+                }
+            }
+        ],
+        &quot;category_post&quot;: [
+            {
+                &quot;id&quot;: 1,
+                &quot;slug&quot;: &quot;constance-ryan&quot;,
+                &quot;name&quot;: &quot;Constance Ryan&quot;,
+                &quot;posts&quot;: [
+                    {
+                        &quot;id&quot;: 1,
+                        &quot;category_id&quot;: 1,
+                        &quot;is_premium&quot;: &quot;Yes&quot;,
+                        &quot;content&quot;: &quot;&lt;p&gt;vcb cb&lt;/p&gt;&quot;
+                    }
+                ]
+            }
+        ]
+    }
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-classified-home-post" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-classified-home-post"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-classified-home-post"></code></pre>
+</span>
+<span id="execution-error-GETapi-classified-home-post" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-classified-home-post"></code></pre>
+</span>
+<form id="form-GETapi-classified-home-post" data-method="GET"
+      data-path="api/classified/home-post"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","x-language":"[en, bn]"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-classified-home-post', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-classified-home-post"
+                    onclick="tryItOut('GETapi-classified-home-post');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-classified-home-post"
+                    onclick="cancelTryOut('GETapi-classified-home-post');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-classified-home-post" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/classified/home-post</code></b>
+        </p>
+                    </form>
+
+            <h2 id="endpoints-GETapi-classified-filter-post">GET api/classified/filter-post</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-classified-filter-post">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/oshni/thikana/public/api/classified/filter-post?filter=est" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --header "x-language: [en, bn]"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost/oshni/thikana/public/api/classified/filter-post"
+);
+
+const params = {
+    "filter": "est",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "x-language": "[en, bn]",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-classified-filter-post">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Filter posts Provided.&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;category_id&quot;: 1,
+            &quot;is_premium&quot;: &quot;Yes&quot;,
+            &quot;content&quot;: &quot;&lt;p&gt;vcb cb&lt;/p&gt;&quot;,
+            &quot;category&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Constance Ryan&quot;,
+                &quot;slug&quot;: &quot;constance-ryan&quot;
+            }
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-classified-filter-post" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-classified-filter-post"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-classified-filter-post"></code></pre>
+</span>
+<span id="execution-error-GETapi-classified-filter-post" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-classified-filter-post"></code></pre>
+</span>
+<form id="form-GETapi-classified-filter-post" data-method="GET"
+      data-path="api/classified/filter-post"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json","x-language":"[en, bn]"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-classified-filter-post', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-classified-filter-post"
+                    onclick="tryItOut('GETapi-classified-filter-post');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-classified-filter-post"
+                    onclick="cancelTryOut('GETapi-classified-filter-post');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-classified-filter-post" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/classified/filter-post</code></b>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                    <p>
+                <b><code>filter</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="filter"
+               data-endpoint="GETapi-classified-filter-post"
+               value="est"
+               data-component="query" hidden>
+    <br>
+<p>(premium, new, old, general)</p>
+            </p>
+                </form>
+
+    
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                                        <button type="button" class="lang-button" data-language-name="bash">bash</button>
+                                                        <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
+                            </div>
+            </div>
+</div>
+</body>
+</html>

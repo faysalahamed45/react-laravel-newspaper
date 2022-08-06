@@ -1,0 +1,49 @@
+
+.footer-text a {
+  text-decoration: none;
+  color: var(--fnt-color-black);
+}
+.footer-text a:hover {
+  color: var(--hover-color)!important;
+}
+.copyright {
+  height: 60px;
+}
+.brand-icon a {
+  display: inline-block;
+  font-size: 23px;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+/* .brand-icon a:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  box-shadow: 0 4px 2px  gray;
+} */
+.brand-icon a:hover {
+ transform: scale(1.2);
+ transition: 0.5s;
+ /* / */
+}
+.grow-apple-text,.grow-android-text{
+ transition: all 0.5s;
+}
+.svg-apple:hover .grow-apple-text,.svg-android:hover .grow-android-text{
+ font-size: 13px;
+}
+.footer-policy ul li {
+ padding-right: 25px;
+}
+.footer-policy ul li a {
+ text-decoration: none;
+ color: #121212;
+}
+
+.footer-policy ul li::before {
+ content: "•";
+ color: #e74d4d;
+ display: inline-block;
+ width: 1em;
+ margin-left: -1em;
+}

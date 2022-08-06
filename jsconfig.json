@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": "resources/js",
+        "paths": {
+            "@classified": ["classified"],
+            "@classified/*": ["classified/*"]
+        }
+    }
+}

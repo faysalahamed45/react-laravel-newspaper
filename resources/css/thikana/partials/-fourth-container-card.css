@@ -1,0 +1,92 @@
+.fourth-card-number {
+  font-size: var(--number-fnSize);
+  font-weight: var(--number-fnWeight);
+  line-height: var(--number-fn-lh);
+  color: var(--number-color);
+}
+.number-container ul li:is(:nth-child(2), :nth-child(3)) {
+  position: relative;
+  letter-spacing: 0.5px;
+  padding-left: 20px;
+}
+.number-container {
+  padding-bottom: 18px;
+}
+.number-container ul {
+  margin: 0;
+  padding: 0;
+}
+.number-container ul li {
+  display: inline-block;
+  height: 32px;
+  cursor: pointer;
+  /* background: #000; */
+}
+.number-container ul li label {
+  cursor: pointer;
+}
+
+#checkbox1-span,
+#checkbox2-span,
+#checkbox3-span {
+  /* display: block; */
+  position: relative;
+  background-color: #ff3c78;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+.checkboxShow
+{
+ display: block!important;
+}
+.checkboxHide
+{
+	display: none!important;
+}
+/* #checkbox2-span,
+#checkbox3-span {
+  display: none;
+}
+#number-container-2,
+#number-container-3 {
+  display: none;
+} */
+
+.fourth-card-ad {
+  height: var(--fourth-card-ad);
+  background: var(--ad-background-color);
+}
+.fourth-card-video {
+  height: var(--video-card-height);
+  /* width: var(--video-card-weight); */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 25.91%,
+    #000000 100%
+  );
+}
+.cr {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  height: var(--video-card-height);
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.cl-red {
+  color: var(--font-color);
+}

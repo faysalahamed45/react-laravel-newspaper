@@ -1,0 +1,13 @@
+.cards-img {
+  background-image: url(../../../assets/image/image\ 2.png),
+    linear-gradient(180deg, rgba(196, 196, 196, 0) 46.47%, #000000 100%);
+  height: var(--image-card-height);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+.second-card-container {
+  height:var(--second-card-sm-height);
+}
+

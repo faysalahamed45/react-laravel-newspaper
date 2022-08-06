@@ -1,0 +1,15 @@
+.sixth-card-container-1st {
+  background: url(../../../assets/image/Rectangle\ 45.png),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 50.26%, #000000 100%);
+  height: var(--image-card-height);
+}
+.sixth-card-container-2nd {
+  height: var(--image-card-sm-height);
+}
+.sixth-card-container-2nd.img {
+  background: url(../../../assets/image/Rectangle\ 60.png);
+  height: var(--image-card-sm-height);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

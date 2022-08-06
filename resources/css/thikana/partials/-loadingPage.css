@@ -1,0 +1,30 @@
+.loading-title1 a {
+  text-decoration: underline 2px var(--hover-color);
+  text-underline-offset: 8px;
+}
+.brand-icon1 a {
+  display: inline-block;
+  font-size: 26px;
+  line-height: 26px;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+.brand-icon1 a:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.loading-page-img {
+  height: var(--image-card-height);
+}
+.loading-page-img img {
+  object-fit: cover center;
+  object-position: center;
+}
+.loading-page-img:hover img {
+  transform: scale(1);
+  cursor: zoom-in;
+}
+/* .loading-title1 a:active{
+ background: #121212!important;
+} */

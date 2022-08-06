@@ -1,0 +1,46 @@
+/* @media(max-width:544px){
+  .fa-magnifying-glass{
+    font-size: 15px;
+  }
+  .fa-bell{
+    font-size: 2vw;
+  }
+} */
+
+/* Small devices */
+
+/* @media(min-width:544px){
+ .fa-magnifying-glass{
+    font-size: 15px;
+  }
+  .fa-bell{
+    font-size: 2vw;
+  }
+} */
+
+/* Medium devices */
+
+/* @media(min-width:768px){
+  .fa-magnifying-glass{
+    font-size: 20px;
+  }
+  .fa-bell{
+    font-size: 2vw;
+  }
+} */
+
+/* Large devices */
+
+/* @media(min-width:992px){
+  .fa-magnifying-glass{
+    font-size: 20px;
+  }
+  .fa-bell{
+    font-size: 2vw;
+  }
+} */
+
+/* Exrta Large devices */
+/* @media(min-width:1200px){
+ 
+} */

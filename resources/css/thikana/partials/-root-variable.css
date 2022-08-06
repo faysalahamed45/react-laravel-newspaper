@@ -1,0 +1,99 @@
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+@font-face {
+	font-family: "Shurjo";
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://assets.prothomalo.com/prothomalo/assets/ShurjoWeb_400_v2-6a682f6f610beeda14f0.woff2) format('woff2'),
+		url(https://assets.prothomalo.com/prothomalo/assets/ShurjoWeb_400_v2-f516035cb806da4a249e.woff) format("woff"),
+		url(https://assets.prothomalo.com/prothomalo/assets/ShurjoWeb_400_v2-46e441a492e5db01a626.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Shurjo";
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+	src: url(https://assets.prothomalo.com/prothomalo/assets/ShurjoWeb_700_v2-ef9e058ccc3a98d85030.woff2) format("woff2"),
+		url(https://assets.prothomalo.com/prothomalo/assets/ShurjoWeb_700_v2-72cba63e779d86520525.woff) format('woff'),
+		url(https://assets.prothomalo.com/prothomalo/assets/ShurjoWeb_700_v2-7084d97ccd992205d87b.ttf) format('truetype'),
+		url(https://assets.prothomalo.com/prothomalo/assets/ShurjoWeb_700_v2-6f30c4f7cce4d463f8e4.eot) format("embedded-opentype");
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxM.woff) format('woff');
+}
+:root {
+	--fallback: "Shurjo", "SolaimanLipi", "Siyam Rupali", "Roboto", "Arial", "Helvetica", "Monospace";
+	--font-1: var(--fallback);
+	--font-3: "Roboto", var(--fallback);
+  --font-style: normal;
+  --ad-background-color: #ec8c8c;
+  --font-color: #e74d4d;
+  --hover-color: #0573E6;
+  --border-color:rgba(50, 50, 50, 0.2);
+  --big-fontSize:42px;
+  --big-lh:54px;
+  --title1-fontSize: 26px;
+  --title1-1-fontSize: 42px;
+  --title1-1-lh: 57px;
+  --title1-lh: 35px;
+  --title-weight: 700;
+  --title2-fontsize: 24px;
+  --title2-lh: 30px;
+  --title2-2-color: #595959;
+  --title3-fontSize: 20px;
+  --title3-lh: 26px;
+  --title4-fontSize: 18px;
+  --title4-lh: 30px;
+  --title-color: #121212;
+  --title-text-decoration: none solid rgba(18, 18, 18);
+  --content-fontSize: 16.187px;
+  --content-date-fontSize: 15px;
+  --content-fontWeight: 400;
+  --content-lh: 22px;
+  --content-color: #555555;
+  --content-text-decoration: none solid rgba(85, 85, 85);
+  --second-card-sm-height:140px;
+  --image-card-height: 423px;
+  --image-card-sm-height: 200px;
+  --image-card-text-weight: 380px;
+  --image-font-white: #ffffff;
+  /* -title2-fontSize:12px; */
+  --date-fontSize: 15px;
+  --date-lh: 20px;
+  --footer-fnt-size: 16px;
+  --footer-fnt-lh: 12px;
+  --fnt-color-black: #000000;
+  --number-fnSize: 46px;
+  --number-fnWeight: 600;
+  --number-fn-lh: 54px;
+  --number-color: #c4c4c4;
+  --video-card-height: 400px;
+  --first-add-height:90px;
+  --second-add-height:250px;
+  --fourth-card-ad:232px;
+	--weShareText-fontSize:14px
+}
+
+
+@media(max-width:768px){
+  :root {
+    --video-card-height: 350px;
+    --image-card-height: 350px;
+    --image-card-text-weight: 350px;
+    --image-card-sm-height: 180px;
+    --second-add-height:200px;
+    --fourth-card-ad:200px;
+    --number-fnSize: 40px;
+    --title1-1-fontSize: 27px;
+    --title1-1-lh: 38px;
+    /* --number-fn-lh: 30px; */
+  }
+}
+
+

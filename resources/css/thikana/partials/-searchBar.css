@@ -1,0 +1,117 @@
+:root {
+ --clr-primary: #ee6352;
+ --clr-body: #333;
+ --clr-bg: #ddd;
+}
+
+.content {
+ width: 250px;
+ /* padding: 3em; */
+ /* box-shadow: 0 0 3em rgba(0, 0, 0, 0.15); */
+ position: relative;
+ margin-top: -5px!important;
+ margin-left: 10px;
+}
+
+/* search part start */
+.search {
+ --size: 35px!important;
+ /* border: 2px solid var(--clr-primary); */
+ display: flex;
+ border-radius: 5px;
+ overflow: hidden;
+ /* font-size: 1.25em; */
+ position: relative;
+ width: var(--size);
+ height: var(--size);
+ /* transition: width 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28); */
+ /* transition: .1s; */
+ /* margin-left: 20px; */
+ padding: 1px;
+}
+.search__input {
+ border: 0;
+ padding: 0.25em 0.25em;
+ flex-grow: 1;
+ outline: 0;
+ z-index: 2;
+ /* position: absolute; */
+ top: 0;
+ bottom: 0;
+ left: 0;
+ width: 0;
+ background: transparent;
+ opacity: 0;
+ cursor: pointer;
+}
+
+.search__submit {
+ font-size: 1.2rem;
+ margin-left: auto;
+ background: transparent;
+ border: 0;
+ cursor: pointer;
+ border-radius: 4px;
+ /* transition: background 200ms ease-out; */
+ width: var(--size);
+ height: 40px;
+}
+.search:focus-within {
+ width: 100%;
+ border: 1px solid var(--clr-primary);
+ transition: width 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.search:focus-within .search__input {
+ opacity: 1;
+ z-index: initial;
+ cursor: initial;
+ width: calc(100% - var(--size));
+}
+.search:focus-within .search__submit {
+ background: var(--clr-primary);
+ color: white;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.search:focus-within .search__submit:hover, .search:focus-within .search__submit:focus {
+ outline: 0;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+}
+.dataResult {
+ position: relative;
+ margin-top: 5px;
+ width: 250px;
+ height: 200px;
+ background-color: white;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ overflow: hidden;
+ overflow-y: auto;
+ overflow-x: hidden;
+ overscroll-behavior-y: contain;
+ border-radius: 5px;
+ z-index: 1000!important;
+ /* display: none; */
+}
+
+.dataResult::-webkit-scrollbar {
+ display: none;
+}
+
+.dataResult .dataItem {
+ width: 100%;
+ /* height: 50px; */
+ display: flex;
+ align-items: center;
+ color: black;
+}
+
+.dataItem p {
+ margin-left: 10px;
+ margin-top: 10px;
+}
+.dataItem a {
+ text-decoration: none;
+}
+
+.dataItem a:hover {
+ color: rgb(48, 21, 186);
+}

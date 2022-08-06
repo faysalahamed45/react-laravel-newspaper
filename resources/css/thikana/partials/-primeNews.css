@@ -1,0 +1,14 @@
+.prime-news-img {
+  overflow: hidden;
+  height: 165px !important;
+}
+.firstPostdescription a{
+ text-decoration: none;
+ color: #121212;
+}
+.firstPostdescription a:hover .cards-content-text{
+ color: #121212!important;
+}
+/* .firstPostdescription a:hover .cards-title-3{
+ color:var(--hover-color);
+} */

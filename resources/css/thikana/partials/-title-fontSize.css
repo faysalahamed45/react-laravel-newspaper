@@ -1,0 +1,88 @@
+.cards-title-big{
+  font-size: var(--big-fontSize);
+  line-height: var(--big-lh);
+  font-weight: var(--title-weight);
+  text-decoration: var(--title-text-decoration);
+  color: var( --font-color);
+}
+.cards-title-1{
+  font-size: var(--title1-fontSize);
+  line-height: var(--title1-lh);
+  font-weight: var(--title-weight);
+  text-decoration: var(--title-text-decoration);
+  color: var( --title-color);
+}
+.cards-title1-1{
+  font-size: var( --title1-1-fontSize);
+  line-height: var(--title1-1-lh);
+  font-weight: var(--title-weight);
+  text-decoration: var(--title-text-decoration);
+  color: var( --title-color);
+}
+.cards-title-1-img{
+  width: var(--image-card-text-weight);
+  font-size: var(--title1-fontSize);
+  line-height: var(--title1-lh);
+  font-weight: var(--title-weight);
+  color: var(--image-font-white);
+}
+.cards-title-2{
+  font-size: var(--title2-fontsize);
+  line-height: var(--title2-lh);
+  font-weight: var(--title-weight);
+  color: var(--font-color);
+}
+.cards-title2-1{
+  font-size: var(--title3-fontSize);
+  line-height: var(--title3-lh);
+  font-weight: var(--title-weight);
+}
+.cards-title2-2{
+  font-size: var(--title3-fontSize);
+  line-height: var(--title3-lh);
+  font-weight: var(--title-weight);
+  color: var(--title2-2-color);
+}
+.cards-title2-3{
+  font-size: var(--title3-fontSize);
+  line-height: var(--title3-lh);
+  font-weight: var(--title-weight);
+  color: #121212;
+}
+.cards-title-3{
+  font-size: var(--title3-fontSize);
+  line-height: var(--title3-lh);
+  font-weight: var(--title-weight);
+  text-decoration: var(--title-text-decoration);
+  color: var( --title-color);
+}
+.cards-title-4{
+  font-size: var(--title4-fontSize);
+  line-height: var(--title4-lh);
+  text-decoration: var(--title-text-decoration);
+  color: var( --title-color);
+}
+.cards-title-4-img{
+  font-size: var(--title4-fontSize);
+  line-height: var(  --title4-lh);
+  font-weight: var(--title-weight);
+  color: var(--image-font-white);
+}
+.cards-content-text{
+  font-size: var(--content-fontSize);
+  line-height: var(--content-lh);
+  font-weight: var(--content-fontWeight);
+  text-decoration: var(--content-text-decoration);
+  color: var(--content-color);
+}
+.cards-content-text-time{
+  font-size: var(--content-date-fontSize);
+  line-height: var(--content-lh);
+  text-decoration: var(--content-text-decoration);
+  color: var(--content-color);
+}
+.weShareText{
+  font-size: var(--weShareText-fontSize);
+  text-decoration: var(--content-text-decoration);
+  color: var(--content-color);
+}

@@ -1,0 +1,105 @@
+.row-1st {
+    border-right: 1px solid rgba(50, 50, 50, 0.2);
+}
+.thikana-1st-content {
+    height: 250px;
+    border-left: 1px solid rgba(50, 50, 50, 0.2);
+    transition: 0.5s;
+}
+.thikana-1st-content-img {
+    height: 210px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.thikana-2nd-content {
+    height: 200px;
+    border-left: 1px solid rgba(50, 50, 50, 0.2);
+}
+.thikana-3rd-content {
+    height: 170px;
+    border-left: 1px solid rgba(50, 50, 50, 0.2);
+}
+
+figcaption {
+    font-size: 13px;
+    line-height: 17px;
+}
+.ad-container {
+    height: var(--second-add-height);
+    background: var(--ad-background-color);
+}
+.row-2nd .img {
+    height: 201px;
+    overflow: hidden;
+}
+.sm-ads-container {
+    height: var(--first-add-height);
+    background: var(--ad-background-color);
+}
+.float-img {
+    top: 0;
+    height: 75px;
+    width: 115px;
+    float: right;
+}
+/* @media (max-width: 544px) {
+  .row-1st{
+    border-right:none;
+  }
+  .thikana-1st-content{
+    height: auto;
+    border-left:none;
+  }
+  .prothomAlo-2nd-content{
+    height: auto;
+    border-left: none;
+  }
+  .thikana-3rd-content{
+    height:auto;
+    border-left:none;
+  }
+  .row-2nd .img{
+    height:300px;
+  }
+  .float-img{
+    height: 125px;
+    width: 187px;
+    float: right;
+  }
+} */
+
+@media (max-width: 768px) {
+    .row-1st {
+        border-right: none;
+    }
+    .thikana-1st-content {
+        height: auto;
+        border-left: none;
+    }
+    .thikana-2nd-content {
+        height: auto;
+        border-left: none;
+    }
+    .thikana-3rd-content {
+        height: auto;
+        border-left: none;
+    }
+    .row-2nd .img {
+        height: 300px;
+    }
+    .float-img {
+        height: 125px;
+        width: 187px;
+        float: right;
+    }
+    .thikana-1st-content-img {
+        height: 336px;
+    }
+    .header-hr {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
